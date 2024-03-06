@@ -32,7 +32,7 @@ class StudentControllers extends AdminController
         $grid->column('email', __('Email'));
         $grid->column('phone', __('Phone'));
         $grid->column('address', __('Address'));
-        $grid->column('image', __('Image'));
+        $grid->column('image')->image();
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 

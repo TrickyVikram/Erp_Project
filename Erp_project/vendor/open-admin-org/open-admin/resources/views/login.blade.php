@@ -17,7 +17,7 @@
 	<body class="bg-light" @if(config('admin.login_background_image'))style="background: url({{config('admin.login_background_image')}}) no-repeat;background-size: cover;"@endif>
 		<div class="d-flex justify-content-center align-items-center h-100">
 			<div class="container m-4" style="max-width:400px;">
-				<h1 class="text-center mb-3 h2"><a class="text-decoration-none text-dark" href="{{ admin_url('/') }}">{{config('admin.name')}}</a></h1>
+				<h1 class="text-center mb-3 h2"><a class="text-decoration-none text-dark" href="{{ admin_url('/') }}">OnVTech</a></h1>
 				<div class="bg-body p-4 shadow-sm rounded-3">
 
 					@if($errors->has('attempts'))

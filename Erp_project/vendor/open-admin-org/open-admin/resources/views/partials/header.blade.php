@@ -1,7 +1,8 @@
 <!-- Main Header -->
 <header class="custom-navbar navbar navbar-light bg-white p-0 align-items-stretch">
     <a class="navbar-brand menu-width container-md bg-semi-dark text-center" href="{{ admin_url('/') }}">
-        <span class="short">{!! config('admin.logo-mini', config('admin.name')) !!}</span><span class="long">{!! config('admin.logo', config('admin.name')) !!}</span>
+        {{-- <span class="short">{!! config('admin.logo-mini', config('admin.name')) !!}</span><span class="long">{!! config('admin.logo', config('admin.name')) !!}</span> --}}
+   <span class="long"> OnVTech  </span>
     </a>
     <div class="d-flex flex-fill flex-wrap header-items">
 

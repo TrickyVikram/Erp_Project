@@ -33,7 +33,7 @@ class TeacherControllers extends AdminController
         $grid->column('phone', __('Phone'));
         $grid->column('dept', __('Dept'));
         $grid->column('address', __('Address'));
-        $grid->column('image', __('Image'));
+        $grid->column('image')->image();
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
