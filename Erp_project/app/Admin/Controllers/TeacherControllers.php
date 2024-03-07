@@ -27,6 +27,7 @@ class TeacherControllers extends AdminController
         $grid = new Grid(new Teacher());
 
         $grid->column('id', __('Id'));
+        $grid->column('user_id', __('user_id'));
         $grid->column('name', __('Name'));
         $grid->column('emp_id', __('Emp id'));
         $grid->column('email', __('Email'));
@@ -51,6 +52,7 @@ class TeacherControllers extends AdminController
         $show = new Show(Teacher::findOrFail($id));
 
         $show->field('id', __('Id'));
+        $show->field('user_id', __('user_id'));
         $show->field('name', __('Name'));
         $show->field('emp_id', __('Emp id'));
         $show->field('email', __('Email'));

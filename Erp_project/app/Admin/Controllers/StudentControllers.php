@@ -27,6 +27,7 @@ class StudentControllers extends AdminController
         $grid = new Grid(new Student());
 
         $grid->column('id', __('Id'));
+        $grid->column('user_id', __('user_id'));
         $grid->column('name', __('Name'));
         $grid->column('roll', __('Roll'));
         $grid->column('email', __('Email'));
@@ -50,6 +51,7 @@ class StudentControllers extends AdminController
         $show = new Show(Student::findOrFail($id));
 
         $show->field('id', __('Id'));
+        $show->field('user_id', __('user_id'));
         $show->field('name', __('Name'));
         $show->field('roll', __('Roll'));
         $show->field('email', __('Email'));
