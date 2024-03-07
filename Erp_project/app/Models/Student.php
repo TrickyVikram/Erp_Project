@@ -8,7 +8,11 @@ class Student extends Model
 {
     protected $table = 'Student';
 
-  
+    protected $fillable = [
+        'name',
+        'email',
+        'user_id'
+    ];
 
 
     public function user()

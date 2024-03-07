@@ -18,6 +18,7 @@ class CreateTeacherTable extends Migration
             $table->string('name')->nullable();
             $table->unsignedBigInteger('user_id'); 
             $table->foreign('user_id')->references('id')->on('users');
+            
             $table->string('emp_id')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();

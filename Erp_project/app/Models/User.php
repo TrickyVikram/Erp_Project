@@ -31,7 +31,7 @@ class User extends Authenticatable
     {
         return $this->hasOne(Student::class);
     }
-    public function Teacher()
+    public function teacher()
     {
         return $this->hasOne(Teacher::class);
     }
@@ -42,12 +42,23 @@ class User extends Authenticatable
 
         static::saved(function ($user) {
             $userId = $user->id;
+             $role=$user->role;
 
-            $student = $user->student()->create([
-                'name' => $user->name,
-                'email' => $user->email,
-                'user_id' => $userId,
-            ]);
+            if ($role==0) {
+            
+                $student = $user->student()->create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'user_id' => $userId,
+                ]);
+            }elseif ($role==2) {
+                $teacher = $user->teacher()->create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'user_id' => $userId,
+                ]);
+            }
+           
 
         });
     }

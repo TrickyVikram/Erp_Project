@@ -71,6 +71,7 @@ class UserControllers extends AdminController
 
         $form->text('name', __('Name'));
         $form->email('email', __('Email'));
+        $form->select('role', __('Role'))->options(['0' => 'Students', '2' => 'Teacher']);
         $form->datetime('email_verified_at', __('Email verified at'))->default(date('Y-m-d H:i:s'));
         $form->password('password', __('Password'));
         $form->text('remember_token', __('Remember token'));
